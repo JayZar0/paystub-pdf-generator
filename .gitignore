@@ -1,0 +1,5 @@
+# SECRET VARIABLES
+.env
+
+# Virtual python environment
+.venv/
