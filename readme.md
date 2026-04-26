@@ -5,6 +5,14 @@ authentication to your payroll service and instead will use a single authenticat
 gathering your api key. This service can be used depending on if your jobs paystub
 service allows for the creation of an api key.
 
+## Table of Contents
+- [Setup](#setup)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Closing the Application ](#closing-the-application)
+- [Open on Startup](#open-on-start-up)
+- [Disclaimer](#disclaimer)
+
 ## Setup
 To set up the application you must:
 1. log in into your account for your paystub
