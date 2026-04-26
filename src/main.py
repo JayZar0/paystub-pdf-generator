@@ -22,8 +22,7 @@ if res.ok:
   # If the response is good then generate the pdf file using the elements in the
   # web pay stub
   print(f"Request succeeded on ${date.today()}")
-  print(res.json())
-  pdf = generator()
+  pdf = generator(f"./payrolls/${date.today()}.pdf")
   pdf.generatePdf(res.json())
 
   # after generating the pdf file then save it in the

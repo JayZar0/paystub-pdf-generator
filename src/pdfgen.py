@@ -5,12 +5,12 @@ class generator:
     self.filename = filename
     pass
 
-  # This function will be used to generate a pdf file with all the data passed
-  # into the constructor
-  def generatePdf(paydata):
+  # This function will be used to generate a pdf file using the data that is
+  # passed in during the call
+  def generatePdf(self, paydata):
     raise NotImplementedError("Function currently not implemented")
 
   # This function will be used to save the pdf file to the passed in directory
-  def savePdf(directory):
+  def savePdf(self, directory):
     raise NotImplementedError("Function currently not implemented")
 
