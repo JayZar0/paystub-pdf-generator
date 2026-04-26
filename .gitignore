@@ -3,3 +3,6 @@
 
 # Virtual python environment
 .venv/
+
+# Cache data and build files
+src/__pycache__

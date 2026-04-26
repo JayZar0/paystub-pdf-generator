@@ -1,0 +1,133 @@
+{
+  "statements": [
+    {
+      "statement": {
+        "sequenceNumber": "188323305",
+        "paymentType": {
+          "description": "RG",
+          "name": "Regular",
+          "nameFrench": "Régulier"
+        },
+        "company": {
+          "customerNumber": "D00001",
+          "payPeriod": "9",
+          "paymentDate": "2024-05-15",
+          "periodEnding": "2024-05-01",
+          "address": "123 Test st",
+          "city": "Test",
+          "postalCode": "T4C2C8",
+          "province": "Alberta"
+        },
+        "employee": {
+          "firstName": "Alyona",
+          "lastName": "Savranenko",
+          "employeeNumber": "0016",
+          "employeeId": 16,
+          "address": "29 Sola Ave",
+          "city": "Cochrane",
+          "postalCode": "T4C1G5",
+          "province": "Alberta",
+          "department": "6-5110: Salaries",
+          "departmentFrench": "6-5110: Salaires",
+          "departmentNumber": "000001"
+        },
+        "balance": [
+          {
+            "description": "Vac Accr",
+            "descriptionFrench": "Vac Accr",
+            "current": 370.44
+          },
+          {
+            "description": "Banked Time",
+            "descriptionFrench": "Banked Time",
+            "current": 0
+          }
+        ],
+        "earning": [
+          {
+            "description": "Salary",
+            "descriptionFrench": "Salaire",
+            "hours": 0,
+            "rate": 3087,
+            "current": 0,
+            "yearToDate": 18522,
+            "yearToDateUnits": 520.02,
+            "isDollars": true
+          },
+          {
+            "description": "Salary",
+            "descriptionFrench": "Salaire",
+            "hours": 86.67,
+            "rate": 3087,
+            "current": 3087,
+            "yearToDate": 9261,
+            "yearToDateUnits": 260.01,
+            "isDollars": true
+          }
+        ],
+        "deduction": [
+          {
+            "description": "Federal Tax",
+            "descriptionFrench": "Impôt fédéral",
+            "current": 533.7,
+            "yearToDate": 5111.58
+          },
+          {
+            "description": "Provincial Tax",
+            "descriptionFrench": "Impôt provincial",
+            "current": 0,
+            "yearToDate": 0
+          },
+          {
+            "description": "CPP",
+            "descriptionFrench": "RPC",
+            "current": 179.59,
+            "yearToDate": 1616.31
+          },
+          {
+            "description": "CPP2",
+            "descriptionFrench": "RPC2",
+            "current": 0,
+            "yearToDate": 0
+          },
+          {
+            "description": "EI",
+            "descriptionFrench": "AE",
+            "current": 52.53,
+            "yearToDate": 472.77
+          },
+          {
+            "description": "PPIP",
+            "descriptionFrench": "RQAP",
+            "current": 0,
+            "yearToDate": 0
+          },
+          {
+            "description": "Pension",
+            "descriptionFrench": "Pension",
+            "current": 0,
+            "yearToDate": 1481.76
+          },
+          {
+            "description": "Pension",
+            "descriptionFrench": "Pension",
+            "current": 246.96,
+            "yearToDate": 740.88
+          }
+        ],
+        "summary": {
+          "currentGross": 3087,
+          "currentStatDeductions": 765.82,
+          "currentNormalDeductions": 246.96,
+          "currentDeductionsTotal": 1012.78,
+          "currentNet": 2074.22,
+          "yearToDateGross": 27783,
+          "yearToDateStatDeductions": 7200.66,
+          "yearToDateNormalDeductions": 2222.64,
+          "yearToDateDeductionsTotal": 9423.3,
+          "yearToDateNet": 18359.7
+        }
+      }
+    }
+  ]
+}
