@@ -1,5 +1,6 @@
 from xhtml2pdf import pisa
 from jinja2 import Environment, FileSystemLoader
+import json
 
 # This file will contain the pdf generator
 
@@ -12,21 +13,23 @@ class generator:
   # passed in during the call
   def generatePdf(self, paydata):
     # organize the data
-    statement = paydata.statement
-    company = paydata.company
-    employee = paydata.employee
-    balance = paydata.balance
-    earning = paydata.earning
-    deduction = paydata.deduction
-    summary = paydata.summary
+    statement = paydata['statements'][0]['statement']
+    company = statement['company']
+    employee = statement['employee']
+    balance = statement['balance']
+    earning = statement['earning']
+    deduction = statement['deduction']
+    summary = statement['summary']
 
     # grab the layout and store it in a variable for later use
-    env = Environment(loader=FileSystemLoader('.'))
+    env = Environment(loader=FileSystemLoader('./resources'))
     template = env.get_template('pdflayout.html')
 
     # map the data to its variable and then place it in the html template
     data = {
-      
+      "date":company.paymentDate,
+      "name": f"{employee.lastName}, ${employee.firstName}",
+      "empNumber": employee.employeeNumber
     }
     rendered_html = template.render(data)
 
@@ -35,4 +38,4 @@ class generator:
       pisa_status = pisa.CreatePDF(rendered_html, dest=pdf)
     
     if not pisa_status.err:
-      print(f', saved to ${self.path}')
+      print(f', saved to {self.path}')
