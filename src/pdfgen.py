@@ -27,15 +27,19 @@ class generator:
 
     # map the data to its variable and then place it in the html template
     data = {
-      "date":company.paymentDate,
-      "name": f"{employee.lastName}, ${employee.firstName}",
-      "empNumber": employee.employeeNumber
+      "date":company['paymentDate'],
+      "name": f"{employee['lastName']}, {employee['firstName']}",
+      "empNumber": employee['employeeNumber']
     }
     rendered_html = template.render(data)
 
     # writeout the pdf file and then save it.
-    with open(self.path, "r+w") as pdf:
-      pisa_status = pisa.CreatePDF(rendered_html, dest=pdf)
-    
+    try:
+      with open(self.path, "w+b") as pdf:
+        pisa_status = pisa.CreatePDF(rendered_html, dest=pdf)
+    except:
+      print(f"Error occured while trying to open file, {self.path} doesn't exist")
+      return
+
     if not pisa_status.err:
-      print(f', saved to {self.path}')
+      print(f'Success! File saved to {self.path}')

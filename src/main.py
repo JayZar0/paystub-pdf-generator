@@ -23,11 +23,8 @@ if res.ok:
   # web pay stub
   filename = f'payrolls/{date.today()}.pdf'
   print(f"Http request succeeded on {date.today()}")
-  pdf = generator(f"../{filename}")
+  pdf = generator(f"{filename}")
   pdf.generatePdf(res.json())
-
-  # after generating the pdf file then save it in the
-  pdf.savePdf('./') 
 else:
   # TODO: create other errors based on where generation failed
   print(f"The request has failed on {date.today()}")
