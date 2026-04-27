@@ -29,7 +29,10 @@ class generator:
     data = {
       "date":company['paymentDate'],
       "name": f"{employee['lastName']}, {employee['firstName']}",
-      "empNumber": employee['employeeNumber']
+      "empNumber": employee['employeeNumber'],
+      "deptName": employee['department'],
+      "deptNum": employee['departmentNumber'],
+      "idNum": statement['sequenceNumber']
     }
     rendered_html = template.render(data)
 
